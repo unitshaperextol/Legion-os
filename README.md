@@ -13,7 +13,7 @@
 **"My name is Legion, for we are many."**  
 LEGION is an enterprise-grade, zero-overhead orchestrator designed to run 50+ autonomous frontier AI models in a unified high-speed mesh network.
 
-[📥 Download Release](#-quickstart) • [Why LEGION?](#-why-legion) • [Architecture](#-architecture) • [Documentation](#-documentation) • [Changelog](#-changelog)
+[📥 Download Release](#-quickstart) • [Why LEGION?](#-why-legion) • [Changelog](#-changelog)
 
 </div>
 
