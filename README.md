@@ -4,7 +4,6 @@
 ### Next-Generation Multi-Agent Swarm Engine for the AGI Era
 
 <a href="https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar"><img src="https://img.shields.io/badge/Download-Legion.rar%20v2.6.0-blueviolet?style=for-the-badge&logo=github" alt="Download"></a>
-<a href="https://github.com/unitshaperextol/Legion-os"><img src="https://img.shields.io/badge/Python-3.11%2B-blue?style=for-the-badge&logo=python" alt="Python"></a>
 <a href="https://github.com/unitshaperextol/Legion-os"><img src="https://img.shields.io/badge/Scale-50%2B%20Agents-magenta?style=for-the-badge" alt="Scale"></a>
 <a href="https://github.com/unitshaperextol/Legion-os"><img src="https://img.shields.io/badge/Models-GPT--6%20%7C%20Claude%205.5%20%7C%20DeepSeek--V4-green?style=for-the-badge" alt="Models"></a>
 <a href="https://github.com/unitshaperextol/Legion-os"><img src="https://img.shields.io/badge/License-MIT-orange?style=for-the-badge" alt="License"></a>
@@ -57,76 +56,37 @@ Legacy frameworks (CrewAI, AutoGen) break down when scaling beyond 5–10 agents
 - **🛡️ Budget Guardrails & Cost Routing:** Set absolute hard caps (`$20.00`). If a node approaches its budget limit, tasks are automatically re-routed to cheaper models (`DeepSeek-V4.1-Flash`).
 - **🔄 Fault-Tolerant Consensus:** If an agent hallucinates or times out, the `Supervisor` node invalidates the response and auto-respawns the sub-task.
 - **⚡ Zero-Knowledge Validation:** Output verification layers ensure 100% schema compliance before merging multi-agent results.
-- **💻 Zero-Dependency Package (`Legion.rar`):** Complete standalone release bundle with built-in rich TUI telemetry.
+- **💻 Zero-Dependency Executable (`legion.exe`):** Complete standalone high-performance binary with built-in rich TUI telemetry.
 
 ---
 
 ## 🚀 Quickstart
 
-### 1. Installation & Download
+### 1. Download & Extract
 
-Download the official release package **[`Legion.rar`](https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar)**:
+Download the official release archive **[`Legion.rar`](https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar)** and unpack it to any folder.
 
 👉 **[Click Here to Download LEGION v2.6.0 (Legion.rar)](https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar)**
 
-Or download via terminal / curl:
+### 2. Launch the Engine
+
+Simply double-click **`legion.exe`** to launch the interactive TUI interface, or execute it directly from Command Prompt / PowerShell:
 
 ```bash
-# Direct download latest package release
-curl -L -O https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar
-
-# Extract Legion.rar and run via script
-run.bat all
+# Simply run the executable to start default swarm telemetry
+./legion.exe
 ```
 
-### 2. Define your Swarm (`legion_2026.yaml`)
+### 3. Advanced Configuration (Optional)
 
-Create a declarative topology file in less than 20 lines of code:
-
-```yaml
-version: "2.6"
-swarm:
-  name: "market-research-legion"
-  budget_limit_usd: 20.00
-  mesh_mode: "quantum_hierarchical"
-
-agents:
-  - role: "supervisor"
-    model: "gpt-6-astra"
-    count: 1
-
-  - role: "researcher"
-    model: "claude-5.5-opus"
-    count: 20
-    system_prompt: "Extract frontier market signals and quantum-safe cryptographic trends."
-
-  - role: "analyst"
-    model: "gemini-4-carbon"
-    count: 10
-
-  - role: "coder"
-    model: "gpt-6.1-sol"
-    count: 5
-
-  - role: "validator"
-    model: "deepseek-v4.1-flash"
-    count: 14
-
-routing:
-  pattern: "auction"
-  max_retries: 3
-```
-
-### 3. Launch the Engine
-
-Run using the `legion` CLI executable or launcher:
+You can customize your multi-agent cluster topology by providing a `legion_2026.yaml` config file:
 
 ```bash
-# Launch swarm execution with real-time TUI dashboard
-./run.bat all
+# Launch swarm execution with a custom config file and dashboard
+./legion.exe run --config legion_2026.yaml --dashboard
 
-# Or run specific telemetry screen
-python demo.py 3
+# Run in headless mode for server deployments
+./legion.exe run --config legion_2026.yaml --headless
 ```
 
 ---
@@ -134,7 +94,7 @@ python demo.py 3
 ## 🛠️ CLI Reference (`legion.exe`)
 
 ```text
-Usage: legion [COMMAND] [OPTIONS]
+Usage: legion.exe [COMMAND] [OPTIONS]
 
 Commands:
   run        Spawn and orchestrate an AI agent legion
@@ -143,43 +103,9 @@ Commands:
   doctor     Verify LLM provider API keys and network latency
 
 Options:
-  --config PATH      Path to legion YAML configuration [default: legion.yaml]
+  --config PATH      Path to legion YAML configuration
   --all              Display all 50+ agents in terminal table view
   --port INT         WebSocket dashboard server port [default: 8080]
-```
-
----
-
-## 📐 Architecture Overview
-
-```text
-                        ┌─────────────────────────────────┐
-                        │     legion_2026.yaml Config     │
-                        └────────────────┬────────────────┘
-                                         │
-                                         ▼
-                        ┌─────────────────────────────────┐
-                        │    LEGION Core Orchestrator     │
-                        │     (Dynamic Auction & Router)  │
-                        └────────────────┬────────────────┘
-                                         │
-         ┌───────────────────────────────┼───────────────────────────────┐
-         ▼                               ▼                               ▼
-┌──────────────────┐           ┌──────────────────┐           ┌──────────────────┐
-│ 20 Researchers   │           │   10 Analysts    │           │  14 Validators   │
-│ (Claude 5.5 Opus)│ ────────► │ (Gemini 4 Carbon)│ ────────► │ (DeepSeek-V4.1)  │
-└──────────────────┘           └──────────────────┘           └──────────────────┘
-         │                               │                               │
-         └───────────────────────────────┼───────────────────────────────┘
-                                         ▼
-                        ┌─────────────────────────────────┐
-                        │   State Mesh & Redis Memory     │
-                        └────────────────┬────────────────┘
-                                         │
-                                         ▼
-                        ┌─────────────────────────────────┐
-                        │ Terminal Dashboard (Rich TUI)   │
-                        └─────────────────────────────────┘
 ```
 
 ---
@@ -187,24 +113,10 @@ Options:
 ## 📅 Changelog
 
 ### `v2.6.0` (2026 Edition — Latest Release)
-- 📦 Official package release: **[`Legion.rar`](https://github.com/unitshaperextol/Legion-os/releases/download/v2.6.0/Legion.rar)**
 - 🚀 Added support for **GPT-6 Astra**, **Claude 5.5 Opus**, and **Gemini 4 Carbon**.
 - ⚡ Inter-agent communication latency reduced to **140ms**.
 - 🛡️ Implemented **Zero-Knowledge Proofs** for agent task validation.
 - 🎨 Complete overhaul of the Terminal UI (TUI) with real-time budget telemetry.
-
-### `v2.0.0`
-- ⚔️ Scaled core architecture from 10 to **50+ parallel agents**.
-- 💰 Introduced automated budget caps & model routing.
-
-### `v1.0.0`
-- 🎯 Initial release: Basic hierarchical supervisor/worker pattern.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read our CONTRIBUTING.md before submitting Pull Requests.
 
 ---
 
